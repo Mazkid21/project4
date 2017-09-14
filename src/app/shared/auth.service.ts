@@ -30,6 +30,13 @@ constructor(public afAuth: AngularFireAuth) {
     	new firebase.auth.GoogleAuthProvider());
 	}
 
+
+  //   loginWithFacebook() {
+  //     return this.afAuth.auth.signInWithPopup(
+  //     new firebase.auth.FacebookAuthProvider());
+  // }
+
+
 	isLoggedIn(){
 		if (this.currentUser == null) {
 			return false;

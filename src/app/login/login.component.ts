@@ -20,11 +20,21 @@ ngOnInit() {
 	this.auth.getAuthState().subscribe(
 		(user) => this.user = user);
 	this.topics = this.db.list('/topics');
+
+
+
 }
 
 loginWithGoogle() {
     this.auth.loginWithGoogle();
   }
+
+// loginWithFacebook() {
+//     this.auth.loginWithFacebook();
+//     console.log(this.auth);
+//   }
+
+ 
 
   isLoggedIn() {
   	return this.auth.isLoggedIn();
