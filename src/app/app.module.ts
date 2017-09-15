@@ -9,11 +9,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login/login.component';
+import { MembersComponent } from './members/members.component';
 
 const appRoutes: Routes = [
   
   { path: '', component: LandingPageComponent},
-  { path: 'login', component: LoginComponent}
+  { path: 'login', component: LoginComponent},
+  { path: 'members', component: MembersComponent}
 
 ];
 
@@ -22,7 +24,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     LandingPageComponent,
-    LoginComponent
+    LoginComponent,
+    MembersComponent
   ],
   imports: [
     BrowserModule,

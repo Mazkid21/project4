@@ -1,0 +1,9 @@
+<h1 *ngIf='user.email != null'> Hello!  {{user.email}},  {{user.uid}} </h1>
+
+<ul>
+<h1 *ngIf='topic === null'>LOADING</h1>
+  <li class="text" *ngFor="let topic of topics | async">
+    {{topic.$value}}
+  </li>
+</ul>
+

@@ -6,12 +6,12 @@ import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-members',
+  templateUrl: './members.component.html',
+  styleUrls: ['./members.component.css']
 })
-export class LoginComponent implements OnInit {
-	topics: FirebaseListObservable<any[]>;
+export class MembersComponent implements OnInit {
+topics: FirebaseListObservable<any[]>;
 	user = null;
 
 
@@ -22,24 +22,7 @@ ngOnInit() {
 		(user) => this.user = user);
 	this.topics = this.db.list('https://backbyfire.firebaseio.com/');
 
+		console.log(this.user);
 
-
-}
-
-loginWithGoogle() {
-    this.auth.loginWithGoogle();
-    this.router.navigate(['/members']);
-  }
-
-// loginWithFacebook() {
-//     this.auth.loginWithFacebook();
-//     console.log(this.auth);
-//   }
-
- 
-
-  isLoggedIn() {
-  	return this.auth.isLoggedIn();
-  }
-
+	}
 }
